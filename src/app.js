@@ -14,6 +14,8 @@ app.get("/", (req, res) => {
   res.send("Hello, world!");
 });
 
+app.use("/upload", require("./routes/upload"));
+
 app.use(function errorHandler(error, req, res, next) {
   let response;
   if (NODE_ENV === "production") {

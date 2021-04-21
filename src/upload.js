@@ -3,7 +3,6 @@ const AWS = require("aws-sdk");
 const config = require("./config");
 const { AWS_ACCESS_KEY, AWS_SECRET_ACCESS_KEY } = config;
 const BUCKET_NAME = "soundshare";
-// const cats = require("./cats.jpg");
 
 const s3 = new AWS.S3({
   accessKeyId: AWS_ACCESS_KEY,
@@ -16,7 +15,7 @@ const uploadFile = (fileName) => {
 
   const params = {
     Bucket: BUCKET_NAME,
-    Key: "cat.jpg",
+    Key: "21cats.jpg",
     Body: fileContent,
   };
   s3.upload(params, function (err, data) {
