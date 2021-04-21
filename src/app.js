@@ -11,7 +11,7 @@ app.use(helmet());
 app.use(cors());
 
 app.get("/", (req, res) => {
-  res.send("Hello, world!");
+  res.send("soundshare 200 hellooooo world!");
 });
 
 app.use("/upload", require("./routes/upload"));
