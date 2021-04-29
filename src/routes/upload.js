@@ -14,25 +14,6 @@ const storage = multer.memoryStorage({
 
 const upload = multer({ storage }).array("files");
 
-// const uploadFile = (fileName) => {
-//   //read content from file
-//   const fileContent = fs.readFileSync(fileName);
-
-//   const params = {
-//     Bucket: BUCKET_NAME,
-//     Key: "21cats.jpg",
-//     Body: fileContent,
-//   };
-//   s3.upload(params, function (error, data) {
-//     if (error) throw error;
-//     console.log("file uploaded successfully", data.Location);
-//   });
-// };
-
-// uploadFile(
-//   "C:/Users/Chris/Desktop/soundshare/soundshare-server/src/cat/cats.jpg"
-// );
-
 const s3 = new AWS.S3({
   accessKeyId: AWS_ACCESS_KEY,
   secretAccessKey: AWS_SECRET_ACCESS_KEY,
