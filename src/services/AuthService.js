@@ -1,4 +1,4 @@
-const AmazonCognitoIdentity = require("amazon-cognito-identity-js");
+const AmazonCognitoIdentity = require("amazon-cognito-identity-js-node");
 const { POOL_ID, CLIENT_ID, REGION, IDENTITY_POOL_ID } = require("../config");
 
 const poolData = {
